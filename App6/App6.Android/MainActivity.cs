@@ -19,16 +19,22 @@ namespace App6.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
+            
+            
+        }
+
+        private void CreateServer()
+        {
+            //dfd
             //Server2 server = new Server2(this);
             //server.D();
-           
 
-            Task.Run(async()=> {
+
+            Task.Run(async () => {
                 Server3 server = new Server3(this);
                 await server.Listen();
-               
+
             });
-            
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
